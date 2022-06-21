@@ -11,7 +11,8 @@ const userAge = parseInt(prompt("Quanti anni hai?", "17"));
 console.log(userAge);
 
 // dichiaro constante prezzo per kilometri
-
+const priceForKilom = 0.21;
+console.log(priceForKilom);
 // dichiaro un altra costante con l'operazione che calcola il prezzo finale x tot kilometri
 // Verifico se l'utente rientra tra gli under 18 o over 65 per un eventuale sconto
 // Calcolo prezzo finale
