@@ -1,5 +1,5 @@
 // Recupero l'elemento p dal DOM
-ticketPrice = document.getElementById("prezzo-finale");
+ticketPrice = document.getElementById("ticket-price");
 
 // Chiedo all'utente il numero di chilometri che vuole percorrere
 const kilomRun = parseInt(prompt("Quanti kilometri vuoi percorrere?", "20"));
@@ -29,9 +29,22 @@ else {
         discount = priceFinal * 0.4;
     }
     
-    // Calcolo prezzo finale
-    priceFinal += - discount;
-    
     // Output su pagina il prezzo del biglietto
     ticketPrice.innerHTML = `Il prezzo del tuo biglietto è: <strong>${priceFinal.toFixed(2)}€</strong>`;
+    
+    // Output su pagina lo sconto sul biglietto
+    ticketDiscount = document.getElementById("ticket-discount");
+    if (discount !== 0) {
+        ticketDiscount.innerHTML = `Lo sconto applicato per la tua età è di: <strong>${discount.toFixed(2)}€</strong>`;
+    }
+
+    else {
+        ticketDiscount.innerText = "Non hai nessuno sconto per la tua età";
+    }
+
+    // Calcolo prezzo finale e output su pagina
+    priceFinal += - discount;
+    ticketPriceFinal = document.getElementById("ticket-price-final");
+    ticketPriceFinal.innerHTML = `Il prezzo finale del biglietto è: <strong>${priceFinal.toFixed(2)}€</strong>`
+    
 }
