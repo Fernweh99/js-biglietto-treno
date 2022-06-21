@@ -28,7 +28,11 @@ else if(userAge > 65) {
     discount = priceFinal * 0.4;
 }
 
-console.log(discount)
+console.log(discount);
 
 // Calcolo prezzo finale
+priceFinal += - discount;
+console.log(priceFinal.toFixed(2));
+
 // Output su pagina il prezzo del biglietto
+ticketPrice.innerHTML = `Il prezzo del tuo biglietto è: <strong>${priceFinal.toFixed(2)}€</strong>`;
