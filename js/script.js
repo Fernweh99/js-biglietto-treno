@@ -16,7 +16,19 @@ console.log(priceForKilom);
 
 // dichiaro un altra variabile con l'operazione che calcola il prezzo finale x tot kilometri
 let priceFinal = kilomRun * priceForKilom;
-console.log(priceFinal.toFixed(2));
+console.log(priceFinal);
+
 // Verifico se l'utente rientra tra gli under 18 o over 65 per un eventuale sconto
+let discount = 0
+if (userAge < 18) {
+    discount = priceFinal * 0.2;
+}
+
+else if(userAge > 65) {
+    discount = priceFinal * 0.4;
+}
+
+console.log(discount)
+
 // Calcolo prezzo finale
 // Output su pagina il prezzo del biglietto
